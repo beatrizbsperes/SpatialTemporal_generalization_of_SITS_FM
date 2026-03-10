@@ -1,0 +1,30 @@
+[project]
+name = "SITS-FM"
+requires-python = ">=3.12,<3.13"
+version = "0.1.0"
+
+authors = [
+    { name = "Beatriz Peres" },
+]
+
+dependencies = [
+    "numpy",
+    "h5py",
+    #"pytables",
+    "tables",
+    "pandas",
+    "geopandas",
+    "matplotlib",
+    "scipy",
+    "ipykernel",
+    "rasterio",
+    "scikit-learn",
+    "h5py",
+    "seaborn",
+    "folium>=0.12",
+    "mapclassify",
+    "geotessera",
+]
+
+[project.urls]
+Source = "https://github.com/beatrizbsperes/SpatialTemporal_generalization_of_SITS_FM"
