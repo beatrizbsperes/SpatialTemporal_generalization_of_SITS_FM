@@ -16,6 +16,7 @@ dependencies = [
     "geopandas",
     "matplotlib",
     "scipy",
+    "pyarrow",
     "ipykernel",
     "rasterio",
     "scikit-learn",
