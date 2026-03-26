@@ -29,6 +29,9 @@ dependencies = [
     "planetary_computer",
     "python-dotenv",
     "umap-learn",
+    "torch",
+    "torchgeo",
+    "plotly",
 ]
 
 [project.urls]
