@@ -9,30 +9,67 @@ authors = [
 
 dependencies = [
     "numpy",
-    "h5py",
-    "tables",
     "pandas",
-    "geopandas",
-    "matplotlib",
     "scipy",
     "pyarrow",
-    "ipykernel",
     "rasterio",
+    "geopandas",
+    "pyproj",
+    "shapely",
+    "fiona",
+    "affine",
+    "rioxarray",
+    "xarray",
+    "pystac-client",
+    "pystac",
+    "planetary-computer",
+    "stackstac",
+    "earthengine-api",
+    "geotessera",
+    "torchgeo",
+    "torch",
     "scikit-learn",
+    "umap-learn",
+    "dask",
+    "dask[distributed]",
+    "joblib",
+    "bokeh",
     "h5py",
+    "tables",
+    "matplotlib",
     "seaborn",
+    "plotly",
     "folium>=0.12",
     "mapclassify",
-    "geotessera",
-    "earthengine-api",
-    "pystac_client",
-    "planetary_computer",
+    "ipykernel",
     "python-dotenv",
-    "umap-learn",
-    "torch",
-    "torchgeo",
-    "plotly",
+    "psutil",
+    "tqdm",
+    "requests",
+    "urllib3",
 ]
 
 [project.urls]
 Source = "https://github.com/beatrizbsperes/SpatialTemporal_generalization_of_SITS_FM"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = false
+
+# ── PyTorch GPU installation ───────────────────────────────────────────────────
+# uv does not resolve platform-specific PyTorch index URLs automatically.
+# After running `uv sync`, install the right PyTorch build manually:
+#
+# CPU only (default above):
+#   uv pip install torch torchvision torchaudio
+#
+# CUDA 12.1:
+#   uv pip install torch torchvision torchaudio \
+#     --index-url https://download.pytorch.org/whl/cu121
+#
+# CUDA 12.4:
+#   uv pip install torch torchvision torchaudio \
+#     --index-url https://download.pytorch.org/whl/cu124
